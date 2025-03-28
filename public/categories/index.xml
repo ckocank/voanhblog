@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Categories on VoAnhBlog</title>
-    <link>https://ckocank.github.io/voanhblog/categories/</link>
+    <link>http://localhost:1313/voanhblog/categories/</link>
     <description>Recent content in Categories on VoAnhBlog</description>
     <generator>Hugo -- 0.145.0</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 22 Mar 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://ckocank.github.io/voanhblog/categories/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/voanhblog/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>HomeLabJourney</title>
-      <link>https://ckocank.github.io/voanhblog/categories/homelabjourney/</link>
+      <link>http://localhost:1313/voanhblog/categories/homelabjourney/</link>
       <pubDate>Sat, 22 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>https://ckocank.github.io/voanhblog/categories/homelabjourney/</guid>
+      <guid>http://localhost:1313/voanhblog/categories/homelabjourney/</guid>
       <description></description>
     </item>
   </channel>

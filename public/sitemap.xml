@@ -2,43 +2,43 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://ckocank.github.io/voanhblog/tags/cable/</loc>
+    <loc>http://localhost:1313/voanhblog/tags/cable/</loc>
     <lastmod>2025-03-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://ckocank.github.io/voanhblog/categories/</loc>
+    <loc>http://localhost:1313/voanhblog/categories/</loc>
     <lastmod>2025-03-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://ckocank.github.io/voanhblog/posts/hl2hardware1/</loc>
+    <loc>http://localhost:1313/voanhblog/posts/hl2hardware1/</loc>
     <lastmod>2025-03-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://ckocank.github.io/voanhblog/tags/homelab/</loc>
+    <loc>http://localhost:1313/voanhblog/tags/homelab/</loc>
     <lastmod>2025-03-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://ckocank.github.io/voanhblog/categories/homelabjourney/</loc>
+    <loc>http://localhost:1313/voanhblog/categories/homelabjourney/</loc>
     <lastmod>2025-03-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://ckocank.github.io/voanhblog/tags/iot/</loc>
+    <loc>http://localhost:1313/voanhblog/tags/iot/</loc>
     <lastmod>2025-03-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://ckocank.github.io/voanhblog/tags/keystone/</loc>
+    <loc>http://localhost:1313/voanhblog/tags/keystone/</loc>
     <lastmod>2025-03-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://ckocank.github.io/voanhblog/posts/</loc>
+    <loc>http://localhost:1313/voanhblog/posts/</loc>
     <lastmod>2025-03-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://ckocank.github.io/voanhblog/tags/rj45/</loc>
+    <loc>http://localhost:1313/voanhblog/tags/rj45/</loc>
     <lastmod>2025-03-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://ckocank.github.io/voanhblog/tags/</loc>
+    <loc>http://localhost:1313/voanhblog/tags/</loc>
     <lastmod>2025-03-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://ckocank.github.io/voanhblog/</loc>
+    <loc>http://localhost:1313/voanhblog/</loc>
     <lastmod>2025-03-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://ckocank.github.io/voanhblog/posts/hl1preparation/</loc>
+    <loc>http://localhost:1313/voanhblog/posts/hl1preparation/</loc>
     <lastmod>2025-03-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://ckocank.github.io/voanhblog/posts/hl0howthejourneystart/</loc>
+    <loc>http://localhost:1313/voanhblog/posts/hl0howthejourneystart/</loc>
     <lastmod>2025-03-11T00:00:00+00:00</lastmod>
   </url>
 </urlset>

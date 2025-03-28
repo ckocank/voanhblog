@@ -1,3 +1,3 @@
 User-agent: *
 Disallow:
-Sitemap: https://ckocank.github.io/voanhblog/sitemap.xml
+Sitemap: http://localhost:1313/voanhblog/sitemap.xml

@@ -1,0 +1,44 @@
+baseURL: https://example.org/
+languageCode: en-us
+title: VoAnhBlog
+theme: ["PaperMod"]
+pagination.pagerSize: 5
+
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+
+minify:
+  disableXML: true
+  minifyOutput: true
+
+params:
+  env: production
+  title: ExampleSite
+  description: "ExampleSite description"
+  keywords: [Blog, IoT, HomeLab, Networking]
+  DateFormat: "January 2, 2006"
+  defaultTheme: auto # dark, light
+  
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: false
+  ShowWordCount: false
+
+  assets:
+    disableHLJS: true
+  
+menu:
+  main:
+    - identifier: categories
+      name: Categories
+      url: /categories/
+      weight: 10
+    - identifier: tags
+      name: Tags
+      url: /tags/
+      weight: 20
+pygmentsUseClasses: true
+markup:
+  highlight:
+    noClasses: false

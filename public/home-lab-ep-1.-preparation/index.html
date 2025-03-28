@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>Home Lab Ep 1. Preparation | VoAnhBlog</title>
+<meta name="keywords" content="">
+<meta name="description" content="Mình sẽ giả sử mọi người bắt đầu với con số 0. Tức là hạ tầng chưa có, kinh nghiệm cũng không.
+Với một căn nhà mới bắt đầu hoàn thiện, ngoài bản thiết kế các thiết bị điện hãy thêm một bản thiết kế các thiết bị mạng bao gồm các thiết bị sau:
+
+Vị trí đặt tủ rack.
+Vị trí đặt modem, có thể tích hợp luôn vào tủ rack cho gọn.
+Vị trí các thiết bị access point (cục wfi).
+Vị trí lắp camera an ninh.
+Vị trí các thiết bị sử dụng mạng có dây (máy tính, tivi).
+Vị trí lắp các thiết bị thông minh như công tắc, cảm biến.
+Cần phải có mô tả chi tiết ngay từ đầu để khi thi công các bác thợ còn kéo dây, hay biết cách đi dây sao cho đúng. Tránh việc làm rồi mới nghĩ ra thêm vào gây sự khó chịu cho cả 2 bên.
+
+Lựa chọn tủ rack.
+![[rack4u.png]]
+Có cần lắp tủ rack trong gia đình không? Tủ rack thường gắn liên đến các server, data center, to cồng kềnh, ồn ào, tốn điện, chính vì thế nên nhiều người không nghĩ đến việc lắp tủ rack trong nhà. Nhưng với tủ rack mạng gia đình thì ta chỉ cần 1 tủ  bé bé xinh xinh, khoảng 4-6u là đủ rồi. Lắp tủ rack đầu tiên sẽ giúp chúng ta quản lý tập trung các thiết bị, sau đó là sự gọn gàng, cuối cùng là sự chuyên nghiệp. Đặc biệt các bác không làm IT mà tự lắp tủ rack thì khách đến nhà chơi có thể tự hào giới thiệu là hệ thống mạng gia đình tự tay thiết kế xong chém gió đủ thứ luôn.
+Tủ rack tiêu chuẩn là tủ rack 19 inch. Các bạn hãy chọn tủ 4u nếu muốn gọn gàng, tủ 6u nếu muốn mở rộng các thiết bị trong tương lai. Chi phí cho tủ rack cũng khá dễ chịu với tủ 4u (6800k). Các bác mà đi săn tủ cũ thì còn rẻ nữa, chỉ khoảng 3400k là có rồi. Vì tủ rack không có gì để hỏng nên mua cũ không sao nhé, tủ cũ xấu xấu bẩn bẩn lau đi là được, đừng chọn tủ móp méo là ok.">
+<meta name="author" content="">
+<link rel="canonical" href="http://localhost:1313/home-lab-ep-1.-preparation/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.f49d66caae9ea0fd43f21f29e71a8d3e284517ed770f2aa86fa012953ad3c9ef.css" integrity="sha256-9J1myq6eoP1D8h8p5xqNPihFF&#43;13Dyqob6ASlTrTye8=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/home-lab-ep-1.-preparation/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="VoAnhBlog (Alt + H)">VoAnhBlog</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/categories/" title="Categories">
+                    <span>Categories</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/archives/" title="Archives">
+                    <span>Archives</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      Home Lab Ep 1. Preparation
+    </h1>
+    <div class="post-meta"><span title='2025-03-15 00:00:00 +0000 UTC'>March 15, 2025</span>
+
+</div>
+  </header> 
+  <div class="post-content"><p>Mình sẽ giả sử mọi người bắt đầu với con số 0. Tức là hạ tầng chưa có, kinh nghiệm cũng không.</p>
+<p>Với một căn nhà mới bắt đầu hoàn thiện, ngoài bản thiết kế các thiết bị điện hãy thêm một bản thiết kế các thiết bị mạng bao gồm các thiết bị sau:</p>
+<ul>
+<li>Vị trí đặt tủ rack.</li>
+<li>Vị trí đặt modem, có thể tích hợp luôn vào tủ rack cho gọn.</li>
+<li>Vị trí các thiết bị access point (cục wfi).</li>
+<li>Vị trí lắp camera an ninh.</li>
+<li>Vị trí các thiết bị sử dụng mạng có dây (máy tính, tivi).</li>
+<li>Vị trí lắp các thiết bị thông minh như công tắc, cảm biến.
+Cần phải có mô tả chi tiết ngay từ đầu để khi thi công các bác thợ còn kéo dây, hay biết cách đi dây sao cho đúng. Tránh việc làm rồi mới nghĩ ra thêm vào gây sự khó chịu cho cả 2 bên.</li>
+</ul>
+<h3 id="lựa-chọn-tủ-rack">Lựa chọn tủ rack.<a hidden class="anchor" aria-hidden="true" href="#lựa-chọn-tủ-rack">#</a></h3>
+<p>![[rack4u.png]]
+Có cần lắp tủ rack trong gia đình không? Tủ rack thường gắn liên đến các server, data center, to cồng kềnh, ồn ào, tốn điện, chính vì thế nên nhiều người không nghĩ đến việc lắp tủ rack trong nhà. Nhưng với tủ rack mạng gia đình thì ta chỉ cần 1 tủ  bé bé xinh xinh, khoảng 4-6u là đủ rồi. Lắp tủ rack đầu tiên sẽ giúp chúng ta quản lý tập trung các thiết bị, sau đó là sự gọn gàng, cuối cùng là sự chuyên nghiệp. Đặc biệt các bác không làm IT mà tự lắp tủ rack thì khách đến nhà chơi có thể tự hào giới thiệu là hệ thống mạng gia đình tự tay thiết kế xong chém gió đủ thứ luôn.
+Tủ rack tiêu chuẩn là tủ rack 19 inch. Các bạn hãy chọn tủ 4u nếu muốn gọn gàng, tủ 6u nếu muốn mở rộng các thiết bị trong tương lai. Chi phí cho tủ rack cũng khá dễ chịu với tủ 4u (6<del>800k). Các bác mà đi săn tủ cũ thì còn rẻ nữa, chỉ khoảng 3</del>400k là có rồi. Vì tủ rack không có gì để hỏng nên mua cũ không sao nhé, tủ cũ xấu xấu bẩn bẩn lau đi là được, đừng chọn tủ móp méo là ok.</p>
+<p>![[DP-0031-02.webp]]
+Ngoài ra thì còn loại 10 inch rack này nữa mà loại này khá hiếm và khó mua phụ kiện nên chỉ dành cho các bạn nào chịu chơi thôi chứ mình không ưu tiên lắm dù nó gọn và đẹp lắm. Đôi khi mua đồ tìm tai rack chuẩn 19 inch đã khó rồi lại còn chơi đồ không đúng chuẩn còn khó nữa. Cơ mà ai có máy in 3D thì chơi cái này cũng ok đấy.</p>
+<h3 id="vị-trí-đặt-thiết-bị">Vị trí đặt thiết bị<a hidden class="anchor" aria-hidden="true" href="#vị-trí-đặt-thiết-bị">#</a></h3>
+<p>Các thiết bị như wifi, camera hãy kéo dây mạng cho chúng và không cần dây điện. Lý do là bởi chúng ta sẽ sử dụng PoE nên không cần kéo dây điện nữa. Về cơ chế hoạt động của wifi và camera thông qua PoE mình sẽ có bài giải thích riêng nên tóm tắt lại là làm như vậy sẽ giúp chúng ta quản lý tập trung các thiết bị mạng và có thể tắt cầu giao các tầng nhưng mà không ảnh hưởng tới Internet.</p>
+<ul>
+<li>Wifi sẽ đặt ở trung tâm của nơi sẽ có nhiều thiết bị sử dụng mạng không dây nhất, thay vì đặt ở trung tâm của nhà. Mỗi tầng cũng nên có wifi riêng.</li>
+<li>Nếu không muốn sử dụng loại wifi ốp trần hay ốp tường thì cũng có loại <a href="https://www.omadanetworks.com/vn/business-networking/omada-wifi-wall-plate/eap230-wall/">wifi âm tường</a>. Loại này rất nhỏ ngọn và chỉ to hơn mặt công tắc điện một tí thôi nên không ảnh hưởng tới thiết kế trần có sẵn.</li>
+<li>Camera sẽ không bị giới hạn về số lượng, có thể nếu chưa lắp luôn thì đi dây mạng chờ ra chỗ đó là được.</li>
+<li>Vị trí lắp sẽ là những nơi cơ bản như trước cửa nhà hay hành lang. Còn việc lắp camera ở trong các phòng hay không sẽ tùy lựa chọn mỗi gia đình, vì là server camera được đặt ở ngay tại nhà nên rủi ro về an toàn dữ liệu cũng sẽ giảm đi đáng kể.</li>
+</ul>
+<p>Với các thiết bị IoT, tùy thiết bị sẽ có yêu cầu cấp nguồn khác nhau, để thuật tiện nhất thì mình chọn các thiết bị chạy pin hoặc nguồn AC 220V. Ở đây, các thiết bị cơ bản bao gồm công tắc, cảm biến và aptomat.</p>
+<ul>
+<li>Các loại công tắc sử dụng điện AC 220V sẽ cần phải có dây nguội (dây trung tính) nên phải lưu ý điều này. Có thể chọn loại công tắt thông minh không cần dây nguội nhưng không nên sử dụng loại này, vì công tắt này sẽ không tắt hẳn thiết bị điện mà vẫn phải truyền 1 ít điện để công tắc có thể hoạt động được.</li>
+<li>Để giữ được sự đồng nhất trong thiết kế của ngôi nhà thì mình sẽ chọn loại công tắc thông minh kiểu module thay vì loại công tắc có cả hạt công tắc.</li>
+<li>Với các loại công tắc đảo chiều muốn tích hợp công tắc thông minh thì sẽ phức tạp hơn một tí nên mình sẽ đề cập ở bài viết sau.</li>
+<li>Các loại cảm biến chạy pin thì chỉ đơn giản chỉ cần dán lên trần là được nhưng những loại cảm biến cơ thể người âm trần yêu cầu khoét lỗ thạch cao thì phải đưa vào bản vẽ trần + bản vẽ điện.</li>
+</ul>
+<p>Tủ rack là nơi tập trung của tất cả nên nếu muốn tiết kiệm dây mạng nhất thì có thể đặt ở trung tâm của cả nhà, nếu muốn gọn gàng thì nên đặt trong kho. Do tủ này khá bé nên là treo tường sẽ tốt hơn việc mình đặt trực tiếp dưới sàn nhà.</p>
+<h3 id="nên-đi-dây-mạng-như-thế-nào">Nên đi dây mạng như thế nào<a hidden class="anchor" aria-hidden="true" href="#nên-đi-dây-mạng-như-thế-nào">#</a></h3>
+<p>Ngoài việc kéo đến các vị trí camera và wifi thì cũng cần có các ổ mạng cắm dây cho TV, máy tính, bàn làm việc do việc kéo dây sau khi hoàn thiện tổng thể sẽ khó khăn hơn rất nhiều, kể cả nếu chưa có nhu cầu sử dụng trong hiện tại.</p>
+<ul>
+<li>Có thể với hệ thống mạng gia đình việc này không quá quan trọng nhưng dây mạng không nên chạy song song với dây điện do nhiễu tín hiệu. Về lý thuyết thì khoảng cách tối thiểu là 20cm nhưng thực tế thi công hệ thống điện và mạng trong gia đình sẽ rất khó đạt tiêu chuẩn như vậy. Nên ít nhất hãy sử dụng 2 ống gel khác nhau cho 2 loại dây và để chúng cách nhau xa nhất có thể.</li>
+<li>Dây ở trong các tầng sẽ được đi trong ống gel điện chống cháy sau đó tập trung vào hộp kỹ thuật để đi vào tủ rack. Trong hộp kỹ thuật để tiết kiệm hãy dùng ống thoát nước uPVC d42 để chạy qua các tầng và sử dụng tê thu xiên 45 độ để chia dây qua từng tầng.</li>
+<li>Dây mạng kéo đến tủ rack cần phải có chiều dài hợp lý, tránh kéo việc kéo thiếu hoặc thừa quá nhiều dây.</li>
+<li>Dây mạng hoàn toàn có thể nối được nhưng chúng ta không nên nối dây mạng để đảm bảo tín hiệu (với hệ thống 10G) và đỡ đau đầu nếu phát sinh lỗi.</li>
+<li>Hãy gọi tổng đài lắp đặt internet của nhà mạng để họ có phương án kéo dây cáp quang từ hộp kỹ thuật khu vực vào trong nhà khi thi công phần này. Nên kéo dây cáp quan vào luôn tủ rack cho tiện việc quản lý.</li>
+<li>Dây mạng và dây quang cần hạn chế gập vuông góc 90 độ. Các khúc cần vuông góc thì hãy nhờ thợ uốn ống cho cong nhất có thể. Nhất là với các sợi dây quang, gấp khúc càng nhiều thì suy hao sẽ càng lớn. Việc uốn ống cong cũng sẽ giúp kéo dây dễ hơn. Nếu có dự định kéo thêm đường truyền cáp quang trong tương lai để cân bằng tải thì nên để thêm dây cước chờ.</li>
+</ul>
+<p>Phần chuẩn bị ban đầu chỉ có vậy thôi, ở các phần sau chúng ta sẽ đến với công việc lựa chọn phần cứng.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="http://localhost:1313/">VoAnhBlog</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

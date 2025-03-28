@@ -2,25 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>HomeLabJourney on VoAnhBlog</title>
-    <link>http://localhost:1313/categories/homelabjourney/</link>
+    <link>https://ckocank.github.io/voanhblog/categories/homelabjourney/</link>
     <description>Recent content in HomeLabJourney on VoAnhBlog</description>
     <generator>Hugo -- 0.145.0</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 22 Mar 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/categories/homelabjourney/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://ckocank.github.io/voanhblog/categories/homelabjourney/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Home Lab Ep 2. Hardware Part 1 - Cable</title>
-      <link>http://localhost:1313/posts/hl2hardware1/</link>
+      <link>https://ckocank.github.io/voanhblog/posts/hl2hardware1/</link>
       <pubDate>Sat, 22 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/hl2hardware1/</guid>
+      <guid>https://ckocank.github.io/voanhblog/posts/hl2hardware1/</guid>
       <description>&lt;h4 id=&#34;dây-mạng&#34;&gt;Dây mạng&lt;/h4&gt;
 &lt;p&gt;Ở đây có 2 loại chính là dây cáp đồng 8 sợi và dây quang, do dây quang nhà mạng sẽ cung cấp nên chúng ta không phải lo về vấn đề đấy. Vậy chọn loại dây cáp mạng cho gia đình như thế nào? Không phải chúng ta cứ mua dây xịn nhất là tốt nhất, ở đây chúng ta sẽ ưu tiên chọn dây phù hợp nhất.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Home Lab Ep 1. Preparation</title>
-      <link>http://localhost:1313/posts/hl1preparation/</link>
+      <link>https://ckocank.github.io/voanhblog/posts/hl1preparation/</link>
       <pubDate>Sat, 15 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/hl1preparation/</guid>
+      <guid>https://ckocank.github.io/voanhblog/posts/hl1preparation/</guid>
       <description>&lt;p&gt;Mình sẽ giả sử mọi người bắt đầu với con số 0. Tức là hạ tầng chưa có, kinh nghiệm cũng không.&lt;/p&gt;
 &lt;p&gt;Với một căn nhà mới bắt đầu hoàn thiện, ngoài bản thiết kế các thiết bị điện hãy thêm một bản thiết kế các thiết bị mạng bao gồm các thiết bị sau:&lt;/p&gt;
 &lt;ul&gt;
@@ -33,15 +33,15 @@
 Cần phải có mô tả chi tiết ngay từ đầu để khi thi công các bác thợ còn kéo dây, hay biết cách đi dây sao cho đúng. Tránh việc làm rồi mới nghĩ ra thêm vào gây sự khó chịu cho cả 2 bên.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;lựa-chọn-tủ-rack&#34;&gt;Lựa chọn tủ rack.&lt;/h3&gt;
-&lt;p&gt;&lt;img alt=&#34;rack4u&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/rack4u.png&#34;&gt;
+&lt;p&gt;&lt;img alt=&#34;rack4u&#34; loading=&#34;lazy&#34; src=&#34;https://ckocank.github.io/voanhblog/rack4u.png&#34;&gt;
 Có cần lắp tủ rack trong gia đình không? Tủ rack thường gắn liên đến các server, data center, to cồng kềnh, ồn ào, tốn điện, chính vì thế nên nhiều người không nghĩ đến việc lắp tủ rack trong nhà. Nhưng với tủ rack mạng gia đình thì ta chỉ cần 1 tủ  bé bé xinh xinh, khoảng 4-6u là đủ rồi. Lắp tủ rack đầu tiên sẽ giúp chúng ta quản lý tập trung các thiết bị, sau đó là sự gọn gàng, cuối cùng là sự chuyên nghiệp. Đặc biệt các bác không làm IT mà tự lắp tủ rack thì khách đến nhà chơi có thể tự hào giới thiệu là hệ thống mạng gia đình tự tay thiết kế xong chém gió đủ thứ luôn.
 Tủ rack tiêu chuẩn là tủ rack 19 inch. Các bạn hãy chọn tủ 4u nếu muốn gọn gàng, tủ 6u nếu muốn mở rộng các thiết bị trong tương lai. Chi phí cho tủ rack cũng khá dễ chịu với tủ 4u (6-800k). Các bác mà đi săn tủ cũ thì còn rẻ nữa, chỉ khoảng 3-400k là có rồi. Vì tủ rack không có gì để hỏng nên mua cũ không sao nhé, tủ cũ xấu xấu bẩn bẩn lau đi là được, đừng chọn tủ móp méo là ok.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Home Lab Ep 0. How the journey start</title>
-      <link>http://localhost:1313/posts/hl0howthejourneystart/</link>
+      <link>https://ckocank.github.io/voanhblog/posts/hl0howthejourneystart/</link>
       <pubDate>Tue, 11 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/hl0howthejourneystart/</guid>
+      <guid>https://ckocank.github.io/voanhblog/posts/hl0howthejourneystart/</guid>
       <description>&lt;p&gt;Mình quyết định viết blog để chia sẻ nhưng kinh nghiệm cá nhân trong việc xây dựng một hệ thống &lt;em&gt;&lt;strong&gt;smart home&lt;/strong&gt;&lt;/em&gt; đơn giản, tiết kiệm cho những người mới bắt đầu bước vào &amp;ldquo;con đường&amp;rdquo; này. Blog sẽ tổng hợp rất nhiều kiến thức khác nhau về mạng máy tính (cả phần cứng và phần mềm), Linux, Docker, Zigbee&amp;hellip;&lt;/p&gt;
 &lt;p&gt;Mục tiêu của mình luôn là xây dựng một hệ thống tối ưu chi phí nhất có thể. Các linh kiện đa phần mình đều mua cũ, nếu không có sẵn thì mình sẽ order qua các sàn TMĐT. Nhưng mua cũ chỉ áp dụng cho những người đã có chút kinh nghiệm. Sẽ luôn có sự đánh đổi, bạn có thể nhận lại chút kinh tế nên rủi ro cũng sẽ tăng. Đối với các sản phẩm không có bảo hành nếu hỏng thì coi như vứt thôi&amp;hellip; Nếu những ai yêu thích sự tìm tòi, học hỏi thì cứ mua cũ nhé. Ngoài ra còn cần thời gian để troubleshoot các vấn đề nữa.&lt;/p&gt;</description>
     </item>

@@ -6,6 +6,7 @@ tags:
   - Interview
 categories: Interview Experience
 ---
+Đây là bài viết chia sẻ kinh nghiệm chuẩn bị cho việc phỏng vấn vị trí SWE tại Meta của mình. Trong quá trình này mình đã học được rất là nhiều. Thật sự là không dễ với mình, hy vọng các bạn chuẩn bị thật tốt.
 ### Quy trình phỏng vấn.
 
 Quy trình phỏng vấn bao gồm 5 bước:

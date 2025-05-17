@@ -23,7 +23,7 @@ Cần phải có mô tả chi tiết ngay từ đầu để khi thi công các b
 Có cần lắp tủ rack trong gia đình không? Tủ rack thường gắn liên đến các server, data center, to cồng kềnh, ồn ào, tốn điện, chính vì thế nên nhiều người không nghĩ đến việc lắp tủ rack trong nhà. Nhưng với tủ rack mạng gia đình thì ta chỉ cần 1 tủ  bé bé xinh xinh, khoảng 4-6u là đủ rồi. Lắp tủ rack đầu tiên sẽ giúp chúng ta quản lý tập trung các thiết bị, sau đó là sự gọn gàng, cuối cùng là sự chuyên nghiệp. Đặc biệt các bác không làm IT mà tự lắp tủ rack thì khách đến nhà chơi có thể tự hào giới thiệu là hệ thống mạng gia đình tự tay thiết kế xong chém gió đủ thứ luôn.
 Tủ rack tiêu chuẩn là tủ rack 19 inch. Các bạn hãy chọn tủ 4u nếu muốn gọn gàng, tủ 6u nếu muốn mở rộng các thiết bị trong tương lai. Chi phí cho tủ rack cũng khá dễ chịu với tủ 4u (6-800k). Các bác mà đi săn tủ cũ thì còn rẻ nữa, chỉ khoảng 3-400k là có rồi. Vì tủ rack không có gì để hỏng nên mua cũ không sao nhé, tủ cũ xấu xấu bẩn bẩn lau đi là được, đừng chọn tủ móp méo là ok.
 
-![[10inchrack.png]]
+![10inchrack](/10inchrack.png)
 Ngoài ra thì còn loại 10 inch rack này nữa mà loại này khá hiếm và khó mua phụ kiện nên chỉ dành cho các bạn nào chịu chơi thôi chứ mình không ưu tiên lắm dù nó gọn và đẹp lắm. Đôi khi mua đồ tìm tai rack chuẩn 19 inch đã khó rồi lại còn chơi đồ không đúng chuẩn còn khó nữa. Cơ mà ai có máy in 3D thì chơi cái này cũng ok đấy.
 
 ### Vị trí đặt thiết bị

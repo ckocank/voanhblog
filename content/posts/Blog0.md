@@ -14,7 +14,7 @@ Quy trình phỏng vấn bao gồm 5 bước:
 - **Recruiter Conversation**: Sau khi công ty đánh giá CV của bạn phù hợp với vị trí công việc thì Recruiter sẽ liên hệ với bạn thông qua email để có thể hẹn 1 cuộc nói chuyện ngắn giữa 2 người. Đây chỉ là cuộc gọi để trao đổi qua về vị trí công việc, kinh nghiệm làm việc của bạn.
 - **Screening Interviews** (Phone Screen): Ở đây thì tùy công ty và tùy vị trí mà bạn có 1 đến 2 cuộc phỏng vấn, ở Meta mình được phỏng vấn 1 vòng Coding.
 - **Virtual or Onsite Interview**: Ở vòng này bạn sẽ có từ 3 đến 6 cuộc phỏng vấn khác nhau tùy vào vị trí bạn ứng tuyển. Của mình bao gồm 2 Coding, 2 System Design, 1 Behavioral.
-- Decision: Đơn giản chỉ là quyết định xem bạn có được chọn hay không thôi, nếu được chọn thì tùy vị trí mà có Team Matching nữa.
+- **Decision**: Đơn giản chỉ là quyết định xem bạn có được chọn hay không thôi, nếu được chọn thì tùy vị trí mà có Team Matching nữa.
 
 ### Chuẩn bị cho phỏng vấn.
 
@@ -22,8 +22,8 @@ Thật sự thì mình cũng khá bất ngờ khi CV của mình pass vòng scre
 
 Theo mình để chuẩn bị cho interview loop này thì bạn cần dành ra ít nhất 3 tháng trước khi nộp CV để chuẩn bị các kỹ năng cần thiết. Đấy là với người đi làm và đã có kinh nghiệm liên quan nhé. Còn với những bạn mới ra trường hoặc chưa có tí kinh nghiệm gì thì ít nhất cũng phải 6 tháng. Mình biết 1 ông chuẩn bị trước hẳn 1 năm nhưng vẫn trượt. Vậy nên các bạn không nghiêm túc thì cơ hội sẽ là rất thấp.
 
-#### Vậy chiến lược ở đây là gì? 
-##### Về coding:
+### Vậy chiến lược ở đây là gì? 
+#### Về coding:
 - Đầu tiên, các bạn cần phải nắm vững kiến thức DSA cơ bản như array, stack, hash table, heap, linked list, tree, graph. 
 - Sau đó hãy học các kỹ thuật sử dụng array hiệu quả như two pointers, sliding window, prefix sum, binary search. Các brute force solution sẽ không được chấp nhật kiểu như 2 vòng for lồng nhau với độ phức tạp của thật toán (TC) là O(N^2). Hãy tận dụng hash table như set hoặc map để giảm TC xuống O(N). 
 - Về phần Tree/Graph, hãy thật thành thạo BFS và DFS. BFS thì phải thành thạo cách sử dụng queue, DFS thì phải thành thạo call stack và phân biệt được các kỹ thuật tree traversal như pre-order, in-order, post-order. Nếu một bài Tree mà có thể giải được bằng cả 2 cách thì hãy làm cả 2.
@@ -40,14 +40,14 @@ Các bạn cần nhớ rằng để đánh giá một phần phỏng vấn codin
 
 Ngoài ra thì mỗi câu hỏi bạn chỉ có 20 phút để trả lời thôi nên có khi bạn còn không đủ thời gian để nghĩ ấy. Vậy việc bạn làm thật nhiều LeetCode, thậm chỉ mỗi bài còn phải làm đi làm lại 3, 4 lần nếu bạn chưa hiểu rõ solution sẽ giúp bạn giải hoàn thành câu hỏi nhanh nhất có thể, thậm chí là nhắm mắt bạn cũng phải code được. 
 
-##### Về System Design:
+#### Về System Design:
 Cái này tưởng dễ nhưng cũng không dễ tí nào, cơ bản là mình fail ở đây nên mình mới nói thế :)
 Ở vòng này giám khảo sẽ đánh giá khả năng của bạn trong việc xây dựng một software systems hoặc end-to-end systems mà giải quyết nhu cầu hoặc một vấn đề cụ thể nào đó. Nó đánh giá việc bạn có một cái nhìn tổng thể về hệ thống hay không.
 Tùy vị trí mà bạn sẽ được chọn 1 trong 2 hoặc cả 2 đó là: Systems Design hoặc Product Architectural Design.
 Ví dụ nếu bạn phỏng vấn làm mảng mobile thì người ta có thể yêu cầu bạn thiết kế 1 cái app mobile, nếu làm game thì thiết kế 1 con game. Ngoài ra là thiết kế một hệ thống/ ứng dụng như Facebook, Youtube, Instagram, Uber, hay hệ thống theo dõi ads click, top bài hát được nghe nhiều nhất, live stream comment.
 Cái này khá là rộng và bạn cần phải trang bị được các kiến thức cơ bản về các services khác nhau trong hệ thống.
 
-##### Về Behavioral:
+#### Về Behavioral:
 Đây là vòng mình làm tốt nhất và theo mình cũng là vòng dễ nhất vì các bạn chỉ việc nói thôi. Vòng này thì công ty nào cũng có và họ sẽ đánh giá những gì bạn đã làm trong quá khứ và có thể là cả tương lai. Tại vì với các công ty, họ sẽ không thể nào biết được bạn là một con người như thế nào hay bạn có phù hợp với môi trường của công ty không. Đừng vì vòng này không có phỏng vấn kỹ thuật mà chủ quan vì rất nhiều người dù làm tốt coding và system design nhưng vẫn fail vì vòng này nhé.
 
 Để chuẩn bị đầu tiên hãy viết ra những dự án bạn đã làm trong quá khứ, sau đó hãy xem công ty bạn định phỏng vấn có các tiêu chí gì, AMZ là Leadership Principle, Meta có 5 tiêu chí. Hãy chuẩn bị các câu chuyện ứng với các tiêu chí của công ty.

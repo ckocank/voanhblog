@@ -58,5 +58,7 @@ Các câu hỏi có rất nhiều nhưng chúng cũng dễ bị overlap, một c
 Là bị reject các bạn ạ. Với 6 tuần, mình chỉ tập trung vào coding nên cả 2 phần system design của mình đều bị down level và kết quả tổng thể là mình không được nhận. Có thể nếu mình có nhiều thời gian chuẩn bị hơn thì chắc chắn mình sẽ dành thêm thời gian để học system design. Tất cả các vòng phỏng vấn đều quan trong như nhau nên tạch 1 vòng gần như là xác định nhé. Mỗi vị trí có đến cả trăm cái CV khác nhau nên là các bạn cũng cần chuẩn bị cả tâm lý nữa. Nhiều khi bạn có thể là tốt tất cả các vòng nhưng có người còn làm tốt hơn bạn và CV của họ cũng có nhiều kinh nghiệm hơn bạn thì bạn vẫn trượt bình thường.
 
 Các tài liệu mình tham khảo cho quá trình PV:
+
 CD: YouTube CodingWithMinmer, NeetCode, Cracking FAANG
+
 SD: YouTube HelloInterview, ByteByteGo

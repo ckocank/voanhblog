@@ -7,25 +7,96 @@ tags:
   - SystemDesign
 categories: Interview Experience
 ---
-Không biết là có bao giờ được hỏi không nhưng là một người chơi LMHT được 12 năm thì mình chọn tựa game này để thiết kế cho post đầu tiên của mục này.
+## Riot và Hành Trình Đưa LMHT Lên Cloud: Giải Quyết Bài Toán Hàng Triệu CCU
 
-Đây là hệ thống thực tế được Riot triển khai trên AWS. Trước khi chuyển lên cloud thì Riot tự chạy máy chủ ở các data center khác nhau nhưng không tối ưu được chi phí. Còn sau khi lên cloud của AWS thì nghe nói tiết kiệm được 10 triệu đô la hàng năm luôn.
+Đây là hệ thống thực tế được Riot Games triển khai trên nền tảng AWS. Trước khi chuyển lên cloud, Riot vận hành các máy chủ riêng tại nhiều data center khác nhau trên thế giới. Tuy nhiên, cách làm này không tối ưu về chi phí và khả năng mở rộng. Sau khi chuyển hạ tầng lên AWS, Riot được cho là đã tiết kiệm đến **10 triệu đô la mỗi năm** – một con số không hề nhỏ.
 
-Về Functional Requirements và Non-Functional Requirements thì không có nhiều điều để nói lắm, mình muốn tập chung vào cách mà LMHT xử lý hàng triệu CCU như thế nào. LMHT sử dụng cơ chế dedicated game server, tức là trận đấu sẽ diễn ra ở trên server chứ không phải là ở trong máy tính của các bạn, máy tính của các bạn chỉ có nhận và gửi thông tin của trận đấu lên server thôi. Game server có thể là VM cũng có thể là K8S (trước Riot dùng VM sau dùng K8S), 1 game server sẽ chạy nhiều trận đấu một lúc và mỗi trận đấu sẽ là 1 container instance. Mỗi khu vực / máy chủ sẽ có nhiều game server như vậy. 
+Trong bài viết này, mình sẽ không đi sâu vào các **Functional Requirements (yêu cầu chức năng)** hay **Non-Functional Requirements (yêu cầu phi chức năng)**, mà muốn tập trung vào **cách mà Liên Minh Huyền Thoại (LMHT) xử lý hàng triệu người chơi đồng thời (CCU)**.
 
-Hãy giả sử LMHT có 100 triệu CCU thì ta có phép tính sau:
-- Có 20 khu vực trên trái đất này đặt máy chủ LMHT thì mỗi máy chủ đó phải gánh khoảng 5 triệu CCU.
-`100,000,000 / 20 = 5,000,000 (CCU/region), 20 regions` 
-- Mỗi instance có 10 người chơi và 1 game server có thể chạy được 20 instance thì mỗi khu vực sẽ cần phải có 25000 cái game server như vậy.
-`5,000,000 / (10 x 20) = 25,000 (VM/region), 10 players * 20 instances/vm`
-- Mỗi trận đấu giả sử là 1800 giây thì mỗi giây sẽ có 278 instance mới cần được tạo ra ở mỗi khu vực.
-`5,000,000 / (10 x 1800) = 278 allocation_req/sec, 10 players * 1800 secs/game`
+---
 
-Sau khi đã có con số là 278 thì hãy tìm cách chia 278 request đó vào trong 25000 cái game game server và lặp đi lặp lại sau mỗi giây vậy thì 1 phút sẽ có 16680 reqs. cái này tính cho vui thôi hehe. 
+### LMHT và Kiến Trúc Dedicated Game Server
 
-Như giả sử ở trên, 1 server sẽ host được 20 cái game instance như vậy nhưng thực tế là các game instance không start cùng 1 lúc và cũng không stop cùng 1 lúc. Quan trọng nhất là ở mỗi thời điểm của trận đấu thì CPU usage cũng khác nhau. Ví dụ early game thì các bạn chỉ có đi đường, farm lính, cấp thấp, chiêu hồi lâu, lúc này CPU usage sẽ là thấp nhất vì chả có gì nhiều để xử lý cả, nhất là mấy ông LCK. Bù lại khi chuyển qua mid và late game thì lúc này bạn có đồ có đồ, có hồi chiêu, có nhiều mục tiêu lớn để giao tranh thì CPU usage sẽ tăng cao hơn do có nhiều action cùng một lúc hơn. Vậy thì tất cả các trận đấu bắt đầu cùng nhau thì sẽ cả cái game server sẽ sử dụng ít CPU nhưng đến late thì sẽ lag thôi rồi do cả 20 ông cùng ăn CPU. Vậy giải pháp là gì? Mỗi máy chỉ host 10 game thôi à, như vậy thì x2 lượng máy chủ lên à. Chắc chắn là không rồi vì như vậy vừa tốn kém lại còn không tối ưu phần cứng do lúc thì CPU cùng cao lúc thì cùng thấp. Cách tốt nhất là luôn giữ lượng CPU usage ổn định mặc kệ thời gian bắt đầu trận đấu có như nào. Để làm như vậy thì cần có một thuật toán load balancing hiệu quả và các rules cho nó. 
+LMHT sử dụng mô hình **dedicated game server**: toàn bộ trận đấu được xử lý trên server, còn máy tính của người chơi chỉ đóng vai trò gửi/nhận dữ liệu trận đấu. Trước đây Riot dùng **VMs (máy ảo)**, sau này chuyển sang dùng **Kubernetes (K8s)** để chạy các game server container.
 
-Thôi chém gió thế thôi, các bạn tự tìm hiểu sâu hơn nhé. Dưới đây là phần phân tích cho một buổi phỏng vấn. Các bạn phải phân tích được Functional Requirements, Non Functional Requirements, Core Entity, ngoài ra mình có thêm cả Game Data Flow nữa nhưng chỉ có cái này có thôi.
+Một **game server** có thể chạy đồng thời nhiều **game instance** – mỗi instance là một trận đấu. Thông thường, mỗi server sẽ host khoảng **20 trận đấu** cùng lúc, và mỗi trận đấu có **10 người chơi**.
+
+---
+
+### Bài Toán Quy Mô: Nếu Có 100 Triệu CCU
+
+Giả sử LMHT đạt 100 triệu CCU trên toàn cầu, ta có thể tính toán sơ bộ như sau:
+
+- LMHT có mặt tại **20 khu vực** trên thế giới → mỗi khu vực phải xử lý ~5 triệu CCU:  
+    `100,000,000 / 20 = 5,000,000 CCU/khu vực`
+    
+- Mỗi trận có 10 người chơi và mỗi server xử lý được 20 trận → mỗi khu vực cần:  
+    `5,000,000 / (10 x 20) = 25,000 game server/khu vực`
+    
+- Giả sử mỗi trận kéo dài trung bình **1.800 giây (30 phút)** → số lượng instance cần tạo mới mỗi giây tại mỗi khu vực:  
+    `5,000,000 / (10 x 1800) = 278 yêu cầu khởi tạo/giây`
+    
+
+Vậy trong mỗi giây, hạ tầng cần **xử lý và phân phối 278 yêu cầu tạo game instance mới** đến hơn 25.000 game server – và điều này lặp lại **mỗi giây**, 24/7. Tức là mỗi phút có khoảng **16.680 yêu cầu phân phối**. Tính cho vui vậy thôi, nhưng nó cho thấy rõ bài toán **scaling** là không hề đơn giản.
+
+---
+
+### Thách Thức về CPU Load và Tối Ưu Phân Bổ
+
+Một server có thể host 20 trận đấu là lý tưởng trong điều kiện **các trận diễn ra xen kẽ nhau**. Nhưng trên thực tế:
+
+- Các trận không **bắt đầu** và **kết thúc** cùng lúc.
+    
+- Quan trọng hơn, **CPU usage thay đổi theo giai đoạn trận đấu**:
+    
+    - Early game: đi đường, farm lính, ít giao tranh → CPU thấp
+        
+    - Mid/late game: nhiều kỹ năng, giao tranh tổng, AI phức tạp hơn → CPU tăng vọt
+        
+
+Nếu tất cả 20 trận trên một server đều đồng loạt bước vào **late game**, thì server đó sẽ **quá tải CPU** và gây lag. Vậy có phải giảm xuống 10 trận/server để tránh điều này? Không hề đơn giản, vì làm vậy sẽ:
+
+- **Tăng gấp đôi số lượng server**, kéo theo chi phí vận hành cao
+    
+- **Lãng phí tài nguyên** ở các giai đoạn CPU usage thấp
+    
+
+---
+
+### Giải Pháp: Load Balancing Thông Minh
+
+Riot không chỉ đơn giản tăng số server, mà họ cần:
+
+- Một **thuật toán phân phối tải thông minh**, có thể:
+    
+    - Phân tích mức CPU usage hiện tại của mỗi server
+        
+    - Ước tính mức tài nguyên tiêu thụ của trận đấu mới dựa trên nhiều yếu tố (giờ chơi, số người, tướng chọn,...)
+        
+- **Quy tắc phân bổ hợp lý** để duy trì mức CPU usage ổn định giữa các game server
+    
+
+Mục tiêu cuối cùng là **tối ưu tài nguyên phần cứng mà không làm ảnh hưởng đến trải nghiệm người chơi** – một bài toán rất thực tế, và cực kỳ thử thách ở quy mô toàn cầu.
+
+---
+
+### Phần Phân Tích Cho Phỏng Vấn
+
+Nếu bạn đang luyện tập cho phỏng vấn (đặc biệt là các vị trí về backend/game infra), hãy tự phân tích hệ thống này với các góc độ sau:
+
+- **Functional Requirements**: tạo trận đấu, phân phối người chơi, truyền dữ liệu thời gian thực, giữ kết nối ổn định...
+    
+- **Non-Functional Requirements**: scalability, latency thấp, fault tolerance, cost efficiency...
+    
+- **Core Entities**: game instance, server, player session, match scheduler, resource allocator...
+    
+- **Game Data Flow**: từ client đến server, các bước xử lý game tick, đồng bộ trạng thái,...
+    
+
+---
+
+**Tạm kết:**  
+Mình chọn tựa game này cho bài viết đầu tiên là bởi vì 12 năm gắn bó với nó. Chém gió vậy thôi, hy vọng bài viết giúp bạn hiểu thêm về cách một tựa game trăm triệu người chơi như LMHT xử lý hạ tầng phía sau.
 
 ![LOL-SD](LOL-SD.png)
 

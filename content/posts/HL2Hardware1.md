@@ -24,7 +24,7 @@ Các loại dây mạng như trên còn chia được thêm ra 2 kiểu nữa l�
 
 Chiều dài tối đa của dây mạng là 100m, vượt qua khoảng cách này sẽ không đảm bảo mức tín hiệu nữa. Vậy tính như nào để tối đa 100m? Không phải là chúng ta cứ cắt đủ 100m dây mạng là sẽ đảm bảo mà ở đây, 100m được tính từ điểm đầu đến điểm cuối. Hãy xem hình minh họa dưới đây để tính được chính xác chiều dài dây cần có.
 
-![cablelength](cablelength.png)
+![cablelength](/cablelength.png)
 
 Sau khi kéo dây ta sẽ nối các thiết bị với nhau như nào? Cách đơn giản nhất là sử dụng hạt mạng 8p8c hay còn gọi là RJ45. Đây là phương án rẻ, dễ thi công và tiết kiệm nhất. Chúng ta chỉ cần 1 cái kìm bấm, 1 ít hạt mạng + đầu chụp và 1 bộ test mạng. Tất cả đều có thể dễ dàng mua được thông qua các sàn TMĐT với chi phí rất phải chăng. Ngoài ra khi bấm mạng hãy chọn loại hạt xuyên thấu cùng kìm bấm xuyên thấu sẽ giúp tiết kiệm rất rất nhiều thời gian thi công. Lưu ý khi chọn hạt mạng, hạt mạng không có chuẩn cat như các NSX hay quảng cáo nên chú ý chọn hạt mạng có chống nhiễu hoặc không có chống nhiễu, hạt mạng theo kích cỡ của dây mạng là 23 AWG hoặc 24 AWG, mặc định sẽ là 24 AWG. 
 

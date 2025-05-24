@@ -98,7 +98,7 @@ Nếu bạn đang luyện tập cho phỏng vấn (đặc biệt là các vị t
 **Tạm kết:**  
 Mình chọn tựa game này cho bài viết đầu tiên là bởi vì 12 năm gắn bó với nó. Chém gió vậy thôi, hy vọng bài viết giúp bạn hiểu thêm về cách một tựa game trăm triệu người chơi như LMHT xử lý hạ tầng phía sau.
 
-![LOL-SD](LOL-SD.png)
+![LOL-SD](/LOL-SD.png)
 
 # Functional Requirements
 

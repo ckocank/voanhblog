@@ -7,47 +7,132 @@ tags:
   - IoT
 categories: HomeLabJourney
 ---
-Mình sẽ giả sử mọi người bắt đầu với con số 0. Tức là hạ tầng chưa có, kinh nghiệm cũng không. 
+## Thiết Kế Hệ Thống Mạng Gia Đình Từ Con Số 0
 
-Với một căn nhà mới bắt đầu hoàn thiện, ngoài bản thiết kế các thiết bị điện hãy thêm một bản thiết kế các thiết bị mạng bao gồm các thiết bị sau:
-- Vị trí đặt tủ rack.
-- Vị trí đặt modem, có thể tích hợp luôn vào tủ rack cho gọn.
-- Vị trí các thiết bị access point (cục wfi).
-- Vị trí lắp camera an ninh.
-- Vị trí các thiết bị sử dụng mạng có dây (máy tính, tivi).
-- Vị trí lắp các thiết bị thông minh như công tắc, cảm biến.
-Cần phải có mô tả chi tiết ngay từ đầu để khi thi công các bác thợ còn kéo dây, hay biết cách đi dây sao cho đúng. Tránh việc làm rồi mới nghĩ ra thêm vào gây sự khó chịu cho cả 2 bên.
+Giả sử bạn đang bắt đầu từ con số 0: không có hạ tầng, cũng chưa có kinh nghiệm. Vậy khi xây dựng một căn nhà mới, bên cạnh bản thiết kế điện, bạn cũng nên có một bản thiết kế hệ thống mạng với các hạng mục sau:
 
-### Lựa chọn tủ rack.
+- Vị trí đặt **tủ rack**.
+    
+- Vị trí đặt **modem** (có thể tích hợp trong tủ rack).
+    
+- Vị trí các **access point** (thiết bị phát Wi-Fi).
+    
+- Vị trí lắp **camera an ninh**.
+    
+- Vị trí các **thiết bị sử dụng mạng có dây** (PC, TV...).
+    
+- Vị trí các thiết bị **nhà thông minh** như công tắc, cảm biến.
+    
+
+Việc lập kế hoạch chi tiết từ đầu sẽ giúp thợ thi công kéo dây đúng cách, tránh phát sinh sửa chữa, bổ sung gây tốn công và khó chịu cho cả hai bên.
+
+---
+
+### Lựa Chọn Tủ Rack
+
 ![rack4u](/rack4u.png)
-Có cần lắp tủ rack trong gia đình không? Tủ rack thường gắn liên đến các server, data center, to cồng kềnh, ồn ào, tốn điện, chính vì thế nên nhiều người không nghĩ đến việc lắp tủ rack trong nhà. Nhưng với tủ rack mạng gia đình thì ta chỉ cần 1 tủ  bé bé xinh xinh, khoảng 4-6u là đủ rồi. Lắp tủ rack đầu tiên sẽ giúp chúng ta quản lý tập trung các thiết bị, sau đó là sự gọn gàng, cuối cùng là sự chuyên nghiệp. Đặc biệt các bác không làm IT mà tự lắp tủ rack thì khách đến nhà chơi có thể tự hào giới thiệu là hệ thống mạng gia đình tự tay thiết kế xong chém gió đủ thứ luôn.
-Tủ rack tiêu chuẩn là tủ rack 19 inch. Các bạn hãy chọn tủ 4u nếu muốn gọn gàng, tủ 6u nếu muốn mở rộng các thiết bị trong tương lai. Chi phí cho tủ rack cũng khá dễ chịu với tủ 4u (6-800k). Các bác mà đi săn tủ cũ thì còn rẻ nữa, chỉ khoảng 3-400k là có rồi. Vì tủ rack không có gì để hỏng nên mua cũ không sao nhé, tủ cũ xấu xấu bẩn bẩn lau đi là được, đừng chọn tủ móp méo là ok.
+
+Tủ rack không chỉ dành cho server hay data center. Trong mạng gia đình, bạn chỉ cần một tủ rack nhỏ gọn (4U hoặc 6U) là đủ.
+
+**Lợi ích:**
+
+- **Quản lý tập trung** các thiết bị mạng.
+    
+- **Gọn gàng**, chuyên nghiệp.
+    
+- Tăng độ **ổn định và dễ bảo trì**.
+    
+- Và đặc biệt: “show hàng” với khách tới chơi!
+    
+
+Tủ rack chuẩn là loại **19 inch**, phổ biến và dễ tìm phụ kiện. Bạn có thể chọn:
+
+- **Tủ 4U**: gọn gàng, đủ dùng.
+    
+- **Tủ 6U**: có không gian mở rộng về sau.
+    
+
+Chi phí tủ 4U dao động từ 600.000đ – 800.000đ, mua cũ chỉ khoảng 300.000đ – 400.000đ (tủ rack hầu như không hỏng, chỉ cần tránh mua tủ móp méo là được).
 
 ![10inchrack](/10inchrack.png)
-Ngoài ra thì còn loại 10 inch rack này nữa mà loại này khá hiếm và khó mua phụ kiện nên chỉ dành cho các bạn nào chịu chơi thôi chứ mình không ưu tiên lắm dù nó gọn và đẹp lắm. Đôi khi mua đồ tìm tai rack chuẩn 19 inch đã khó rồi lại còn chơi đồ không đúng chuẩn còn khó nữa. Cơ mà ai có máy in 3D thì chơi cái này cũng ok đấy.
 
-### Vị trí đặt thiết bị
-Các thiết bị như wifi, camera hãy kéo dây mạng cho chúng và không cần dây điện. Lý do là bởi chúng ta sẽ sử dụng PoE nên không cần kéo dây điện nữa. Về cơ chế hoạt động của wifi và camera thông qua PoE mình sẽ có bài giải thích riêng nên tóm tắt lại là làm như vậy sẽ giúp chúng ta quản lý tập trung các thiết bị mạng và có thể tắt cầu giao các tầng nhưng mà không ảnh hưởng tới Internet.
-- Wifi sẽ đặt ở trung tâm của nơi sẽ có nhiều thiết bị sử dụng mạng không dây nhất, thay vì đặt ở trung tâm của nhà. Mỗi tầng cũng nên có wifi riêng.
-- Nếu không muốn sử dụng loại wifi ốp trần hay ốp tường thì cũng có loại [wifi âm tường](https://www.omadanetworks.com/vn/business-networking/omada-wifi-wall-plate/eap230-wall/). Loại này rất nhỏ ngọn và chỉ to hơn mặt công tắc điện một tí thôi nên không ảnh hưởng tới thiết kế trần có sẵn. 
-- Camera sẽ không bị giới hạn về số lượng, có thể nếu chưa lắp luôn thì đi dây mạng chờ ra chỗ đó là được. 
-- Vị trí lắp sẽ là những nơi cơ bản như trước cửa nhà hay hành lang. Còn việc lắp camera ở trong các phòng hay không sẽ tùy lựa chọn mỗi gia đình, vì là server camera được đặt ở ngay tại nhà nên rủi ro về an toàn dữ liệu cũng sẽ giảm đi đáng kể.
+Ngoài ra còn có **loại 10-inch rack**, nhỏ và đẹp nhưng phụ kiện khó kiếm. Nếu bạn có máy in 3D hoặc thích custom DIY thì có thể thử, còn không thì nên ưu tiên chuẩn 19 inch.
 
-Với các thiết bị IoT, tùy thiết bị sẽ có yêu cầu cấp nguồn khác nhau, để thuật tiện nhất thì mình chọn các thiết bị chạy pin hoặc nguồn AC 220V. Ở đây, các thiết bị cơ bản bao gồm công tắc, cảm biến và aptomat. 
-- Các loại công tắc sử dụng điện AC 220V sẽ cần phải có dây nguội (dây trung tính) nên phải lưu ý điều này. Có thể chọn loại công tắt thông minh không cần dây nguội nhưng không nên sử dụng loại này, vì công tắt này sẽ không tắt hẳn thiết bị điện mà vẫn phải truyền 1 ít điện để công tắc có thể hoạt động được.
-- Để giữ được sự đồng nhất trong thiết kế của ngôi nhà thì mình sẽ chọn loại công tắc thông minh kiểu module thay vì loại công tắc có cả hạt công tắc.
-- Với các loại công tắc đảo chiều muốn tích hợp công tắc thông minh thì sẽ phức tạp hơn một tí nên mình sẽ đề cập ở bài viết sau.
-- Các loại cảm biến chạy pin thì chỉ đơn giản chỉ cần dán lên trần là được nhưng những loại cảm biến cơ thể người âm trần yêu cầu khoét lỗ thạch cao thì phải đưa vào bản vẽ trần + bản vẽ điện.
+---
 
-Tủ rack là nơi tập trung của tất cả nên nếu muốn tiết kiệm dây mạng nhất thì có thể đặt ở trung tâm của cả nhà, nếu muốn gọn gàng thì nên đặt trong kho. Do tủ này khá bé nên là treo tường sẽ tốt hơn việc mình đặt trực tiếp dưới sàn nhà. 
+### Vị Trí Lắp Thiết Bị
 
-### Nên đi dây mạng như thế nào
-Ngoài việc kéo đến các vị trí camera và wifi thì cũng cần có các ổ mạng cắm dây cho TV, máy tính, bàn làm việc do việc kéo dây sau khi hoàn thiện tổng thể sẽ khó khăn hơn rất nhiều, kể cả nếu chưa có nhu cầu sử dụng trong hiện tại.
-- Có thể với hệ thống mạng gia đình việc này không quá quan trọng nhưng dây mạng không nên chạy song song với dây điện do nhiễu tín hiệu. Về lý thuyết thì khoảng cách tối thiểu là 20cm nhưng thực tế thi công hệ thống điện và mạng trong gia đình sẽ rất khó đạt tiêu chuẩn như vậy. Nên ít nhất hãy sử dụng 2 ống gel khác nhau cho 2 loại dây và để chúng cách nhau xa nhất có thể.
-- Dây ở trong các tầng sẽ được đi trong ống gel điện chống cháy sau đó tập trung vào hộp kỹ thuật để đi vào tủ rack. Trong hộp kỹ thuật để tiết kiệm hãy dùng ống thoát nước uPVC d42 để chạy qua các tầng và sử dụng tê thu xiên 45 độ để chia dây qua từng tầng.
-- Dây mạng kéo đến tủ rack cần phải có chiều dài hợp lý, tránh kéo việc kéo thiếu hoặc thừa quá nhiều dây. 
-- Dây mạng hoàn toàn có thể nối được nhưng chúng ta không nên nối dây mạng để đảm bảo tín hiệu (với hệ thống 10G) và đỡ đau đầu nếu phát sinh lỗi. 
-- Hãy gọi tổng đài lắp đặt internet của nhà mạng để họ có phương án kéo dây cáp quang từ hộp kỹ thuật khu vực vào trong nhà khi thi công phần này. Nên kéo dây cáp quan vào luôn tủ rack cho tiện việc quản lý.
-- Dây mạng và dây quang cần hạn chế gập vuông góc 90 độ. Các khúc cần vuông góc thì hãy nhờ thợ uốn ống cho cong nhất có thể. Nhất là với các sợi dây quang, gấp khúc càng nhiều thì suy hao sẽ càng lớn. Việc uốn ống cong cũng sẽ giúp kéo dây dễ hơn. Nếu có dự định kéo thêm đường truyền cáp quang trong tương lai để cân bằng tải thì nên để thêm dây cước chờ.
+Các thiết bị như **Wi-Fi và camera** nên kéo dây mạng sẵn **mà không cần dây điện**, vì chúng ta sẽ dùng công nghệ **PoE** (Power over Ethernet). Mình sẽ nói chi tiết về PoE trong bài khác, nhưng tóm lại: nó giúp bạn **quản lý tập trung thiết bị** và **tắt điện tầng mà không ảnh hưởng đến mạng**.
 
-Phần chuẩn bị ban đầu chỉ có vậy thôi, ở các phần sau chúng ta sẽ đến với công việc lựa chọn phần cứng.
+- **Wi-Fi** nên đặt ở trung tâm **khu vực sử dụng**, không nhất thiết ở trung tâm nhà. Mỗi tầng nên có ít nhất 1 AP riêng.
+    
+- Nếu không dùng AP gắn trần/tường, bạn có thể dùng **Wi-Fi âm tường**, ví dụ: [EAP230-Wall của Omada](https://www.omadanetworks.com/vn/business-networking/omada-wifi-wall-plate/eap230-wall/).
+    
+- **Camera** không bị giới hạn về số lượng. Nếu chưa lắp ngay, hãy **đi dây chờ**. Lắp ở cửa ra vào, hành lang... Lắp trong phòng hay không tùy nhu cầu riêng. Do server lưu trữ đặt tại nhà, **rủi ro bảo mật** sẽ thấp hơn đáng kể.
+    
+
+---
+
+### Thiết Bị Nhà Thông Minh (IoT)
+
+Tùy loại thiết bị, bạn cần cấp nguồn khác nhau. Với nhu cầu cơ bản như **công tắc, cảm biến, aptomat**, bạn nên:
+
+- Ưu tiên thiết bị **dùng pin hoặc điện 220V**.
+    
+- Nếu dùng công tắc thông minh 220V, **nhớ bổ sung dây nguội (trung tính)**. Không nên dùng loại không cần dây nguội, vì loại này không tắt hẳn thiết bị và có thể ảnh hưởng độ bền.
+    
+- Để đồng bộ thiết kế, nên chọn **công tắc kiểu module** thay vì nguyên bộ hạt công tắc.
+    
+- Nếu bạn dùng **công tắc đảo chiều**, việc tích hợp sẽ phức tạp hơn và mình sẽ nói ở bài khác.
+    
+- Các **cảm biến dùng pin** thì chỉ cần dán lên trần. Nhưng loại **cảm biến âm trần** (ví dụ cảm biến hiện diện) thì cần **đưa vào bản vẽ trần và bản vẽ điện** để thi công đúng.
+    
+
+---
+
+### Đặt Tủ Rack Ở Đâu?
+
+Tủ rack là trung tâm kết nối.
+
+- Nếu muốn **tiết kiệm dây**, hãy đặt **ở vị trí trung tâm** căn nhà.
+    
+- Nếu muốn **gọn gàng**, hãy đặt **trong kho hoặc tủ kỹ thuật**.
+    
+- Tủ nhỏ nên bạn có thể **treo tường**, sẽ gọn và dễ vệ sinh hơn đặt sàn.
+    
+
+---
+
+### Đi Dây Mạng Như Thế Nào?
+
+Kéo dây mạng đến:
+
+- **Camera**.
+    
+- **Wi-Fi**.
+    
+- **TV, máy tính, bàn làm việc**, kể cả chưa dùng ngay. Đi dây từ đầu sẽ **tiết kiệm thời gian và chi phí về sau**.
+    
+
+Lưu ý:
+
+- Không nên đi dây mạng **song song với dây điện** để tránh nhiễu. Khoảng cách tối thiểu nên là **20cm**, hoặc **sử dụng hai ống gen riêng biệt**, càng xa nhau càng tốt.
+    
+- Trong tầng, đi dây trong **ống gen điện chống cháy**, rồi tập trung về **hộp kỹ thuật**.
+    
+- Dây xuyên tầng nên đi trong **ống thoát nước uPVC D42**, dùng **tê thu xiên 45 độ** để dễ luồn dây và chia tầng.
+    
+- Dây kéo về tủ rack cần có **chiều dài vừa đủ**, tránh quá ngắn hoặc dư quá nhiều.
+    
+- **Không nên nối dây mạng**, nhất là với hệ thống 10G. Nếu cần, hãy thay dây nguyên đoạn.
+    
+- Gọi **nhà mạng kéo dây cáp quang** từ hộp kỹ thuật khu vực vào **thẳng tủ rack**.
+    
+- Dây mạng và dây quang **không được gập góc vuông 90°**. Nên uốn ống mềm cong tròn để **giảm suy hao và dễ kéo dây**.
+    
+- Nếu có kế hoạch **thêm đường truyền cáp quang**, hãy **để sẵn dây cước chờ** trong ống.
+    
+
+---
+
+Trên đây là phần **chuẩn bị hạ tầng** cơ bản. Trong các phần tiếp theo, mình sẽ hướng dẫn cách **lựa chọn phần cứng**, từ router, switch đến thiết bị Wi-Fi và camera.

@@ -10,28 +10,96 @@ tags:
   - Keystone
 categories: HomeLabJourney
 ---
-Ở đây có 2 loại chính là dây cáp đồng 8 sợi và dây quang, do dây quang nhà mạng sẽ cung cấp nên chúng ta không phải lo về vấn đề đấy. Vậy chọn loại dây cáp mạng cho gia đình như thế nào? Không phải chúng ta cứ mua dây xịn nhất là tốt nhất, ở đây chúng ta sẽ ưu tiên chọn dây phù hợp nhất.
+Trong hệ thống mạng gia đình, chúng ta thường gặp hai loại dây phổ biến là **dây cáp đồng 8 sợi** và **dây quang**. Dây quang thường do nhà mạng cung cấp và lắp đặt sẵn, nên chúng ta không cần lo lắng nhiều. Vấn đề quan trọng là chọn loại dây cáp mạng **phù hợp nhất** cho nhu cầu sử dụng trong gia đình. Không phải cứ mua loại đắt tiền nhất là tốt – mà nên chọn đúng loại, đúng mục đích.
 
-Đầu tiên hãy liệt kê một số loại dây cáp mạng 8 lõi 4 cặp xoắn và công dụng của chúng.
-- **Dây cat5** - 100MHz - 100mbps: dây này chúng ta không dùng và các chuẩn từ cat5 chở xuống cũng không dùng do dây mạng đa phần sẽ đi âm tường nên việc thay đổi trong tương lai là rất khó khăn. Cộng thêm việc tốc độ mạng kia thì quá chậm ở thời điểm hiện tại và chi phí giữa cat5 và cat 5e chênh nhau không đáng kể nên ông nào tư vấn cái này thì bye luôn nhé.
-- **Dây cat5e** - 100MHz - 1G: dây này dùng tốt nhất cho việc chạy camera mặc dù camera chỉ cần 100mbps thôi nhưng cũng nên đi dây này cho việc update trong tương lai nữa. Ngoài ra để tiết kiệm thì dùng dây này làm dây wifi và dây LAN âm tường cũng được (do tốc độ tối đa có thể lên tới 2.5G) nhưng nếu có điều kiện hãy chọn các loại dưới đây.
-- **Dây cat6**: chúng ta có 3 loại dây cat6 đó là cat6 / cat6A / cat6e trong đó cat 6A là loại chúng ta nên chọn cho hệ thống mạng 10G. 
-	- Nhược điểm của dây cat6 so với cat6A là chỉ hỗ trợ 10G lên tới 55m, còn 2.5G và 5G thì full 100m. 
-	- Còn cat6e này là do mấy nhà sản xuất họ tự nghĩ ra, cat6e hoạt động ở 550MHz cao hơn 500MHz của cat6A, tần số càng cao càng tốt nhưng sẽ có nhiều yếu tố khác ảnh hưởng tới tốc độ mạng hơn là tần số hoạt động của dây.
-- Các dây từ cat7 trở lên thì không nên chọn do chi phí cao và tính thực tiễn gần như không có.
+### Các loại dây cáp mạng phổ biến
 
-Các loại dây mạng như trên còn chia được thêm ra 2 kiểu nữa là có bọc chống nhiễu (S/FTP, F/UTP) và không có chống nhiễu (UTP). Cáp mạng có vỏ bọc sẽ sử dụng tốt nhất cho môi trường có khả năng bị nhiễu sóng vô tuyến hoặc nhiễu điện từ. Các tình huống cần có cáp mạng chống nhiễu bao gồm khi chạy cáp bên ngoài trời trên mặt đất, gần bảng điện cao thế hoặc hệ thống dây điện, và dọc theo hệ thống dây điện AC thông thường bên trong tường. Các bạn hãy lưu ý rằng khi sử dụng dây cáp này bắt buộc các bạn phải có tiếp địa (thông thường sẽ đấu tiếp địa vào patch panel). Nếu không có tiếp địa thì **tuyệt đối không** sử dụng loại này nhé! Vậy nên ở phần trước mình có nói về việc đi dây mạng và dây điện ở cạnh nhau cần có quy chuẩn như thế nào. Nếu có tiếp địa tốt và dây mạng bị bắt buộc đi chung ống với dây điện thì hãy sử dụng loại có chống nhiễu này. Dây có chống nhiễu sẽ đắt hơn, thi công khó hơn (dây cứng và khó bấm) nên cần phải cân nhắc kỹ lưỡng.
+Dưới đây là một số loại dây cáp đồng 8 lõi (4 cặp xoắn) và công dụng của chúng:
 
-Chiều dài tối đa của dây mạng là 100m, vượt qua khoảng cách này sẽ không đảm bảo mức tín hiệu nữa. Vậy tính như nào để tối đa 100m? Không phải là chúng ta cứ cắt đủ 100m dây mạng là sẽ đảm bảo mà ở đây, 100m được tính từ điểm đầu đến điểm cuối. Hãy xem hình minh họa dưới đây để tính được chính xác chiều dài dây cần có.
+- **Cat5 – 100MHz – 100Mbps**: Gần như không còn ai dùng loại dây này nữa. Do tốc độ quá thấp và không phù hợp với nhu cầu hiện tại. Thêm vào đó, nếu dây được đi âm tường thì việc thay thế sau này rất khó khăn. Vậy nên nếu ai tư vấn dùng Cat5 thì bạn nên từ chối ngay.
+    
+- **Cat5e – 100MHz – 1Gbps**: Loại này rất phù hợp để chạy camera IP (mặc dù camera chỉ cần 100Mbps). Ngoài ra, cũng có thể dùng để đi dây LAN âm tường hoặc dây đến các bộ phát Wi-Fi. Tốc độ tối đa có thể đạt đến 2.5Gbps nếu thiết bị hỗ trợ. Nếu bạn muốn tiết kiệm thì Cat5e vẫn là lựa chọn ổn.
+    
+- **Cat6 / Cat6A / Cat6e**:
+    
+    - **Cat6** hỗ trợ 10Gbps ở khoảng cách dưới 55m, còn 2.5G và 5G thì đạt đủ 100m.
+        
+    - **Cat6A** là lựa chọn nên cân nhắc nếu bạn muốn xây dựng hệ thống mạng 10Gbps ổn định trong phạm vi 100m.
+        
+    - **Cat6e** là loại do một số hãng tự đặt tên, hoạt động ở tần số 550MHz – cao hơn một chút so với Cat6A (500MHz), nhưng hiệu năng thực tế còn phụ thuộc vào nhiều yếu tố khác.
+        
+- **Từ Cat7 trở lên**: Không khuyến khích dùng vì chi phí cao, chuẩn đầu nối không phổ biến, và hiệu quả mang lại không đáng kể so với Cat6A.
+    
+
+### Dây chống nhiễu và không chống nhiễu
+
+Dây mạng còn chia thành hai loại:
+
+- **UTP**: không có lớp chống nhiễu.
+    
+- **FTP, S/FTP, F/UTP...**: có lớp chống nhiễu, phù hợp với môi trường có nhiều nhiễu điện từ hoặc sóng vô tuyến – ví dụ như đi dây ngoài trời, gần tủ điện, hay đi chung ống với dây điện.
+    
+
+Tuy nhiên, nếu bạn sử dụng dây có lớp chống nhiễu **bắt buộc phải có tiếp địa** (thường được nối tại patch panel). Nếu không có tiếp địa, **tuyệt đối không nên dùng loại dây này**, vì dễ gây phản tác dụng – nhiễu còn nặng hơn.
+
+Việc chọn dây chống nhiễu cần cân nhắc kỹ vì:
+
+- Giá cao hơn.
+    
+- Dây cứng, khó thi công, khó bấm đầu.
+    
+
+### Về chiều dài dây mạng
+
+Chiều dài tối đa khuyến nghị cho dây mạng là **100m**, được tính **từ đầu thiết bị này đến đầu thiết bị kia**, bao gồm toàn bộ đoạn dây đi qua âm tường, patch panel, hạt mạng và dây nối.
+
+> Lưu ý: Không phải cắt 100m dây là được — tổng chiều dài _thực tế sử dụng_ phải ≤ 100m.
+
 
 ![cablelength](/cablelength.png)
 
-Sau khi kéo dây ta sẽ nối các thiết bị với nhau như nào? Cách đơn giản nhất là sử dụng hạt mạng 8p8c hay còn gọi là RJ45. Đây là phương án rẻ, dễ thi công và tiết kiệm nhất. Chúng ta chỉ cần 1 cái kìm bấm, 1 ít hạt mạng + đầu chụp và 1 bộ test mạng. Tất cả đều có thể dễ dàng mua được thông qua các sàn TMĐT với chi phí rất phải chăng. Ngoài ra khi bấm mạng hãy chọn loại hạt xuyên thấu cùng kìm bấm xuyên thấu sẽ giúp tiết kiệm rất rất nhiều thời gian thi công. Lưu ý khi chọn hạt mạng, hạt mạng không có chuẩn cat như các NSX hay quảng cáo nên chú ý chọn hạt mạng có chống nhiễu hoặc không có chống nhiễu, hạt mạng theo kích cỡ của dây mạng là 23 AWG hoặc 24 AWG, mặc định sẽ là 24 AWG. 
 
-Cách bấm hạt RJ45 dễ thực hiện nhưng không phải là phương án tối ưu vì đầu nối RJ45 không đảm bảo do bụi và mảnh vụn có thể tích tụ trong đầu nối RJ45, dẫn đến kết nối kém và hiệu suất giảm. Vậy nên cách tốt nhất là hạn chế dùng hạt RJ45 mà hãy sự dụng keystone jack (hiểu nôm na là đầu nối RJ45 cái) hoặc toolless RJ45 connector (đầu nối RJ45 đực không cần kìm bấm). Đặc điểm của 2 loại này là bên trong các đầu nối sẽ có 1 cái pcb nhỏ, pcb này giúp các đầu kết nối giảm tình trạng cross talk (nhiễu tín hiệu). Thật ra việc nhiễu tín hiệu này thường ảnh hưởng tới hệ thống 10G còn các hệ thống dưới 10G thì không đáng kể lắm. 
+### Kết nối các thiết bị với nhau
 
-Ngoài ra việc tự bấm đầu RJ45 cũng sẽ không đảm bảo (kể cả bấm đủ 8 dây) nếu không có thiết bị chuyên dụng để đo. Vì thế chúng ta nên sử dụng patch cable nếu cần 2 dầu nối RJ45 đực trong khoảng cách ngắn (dưới 5m).
+Có 3 cách phổ biến để kết nối dây mạng:
 
-Tóm lại cách đi dây chuẩn từ máy tính đến switch là như sau: 
-Máy tính -> patch cable (x) -> keystone jack (hạt mạng âm tường) -> cat 6A (y) -> keystone jack (patch panel) -> patch cable (z) -> switch. 
-Trong đó x + y + z <= 100m.
+1. **Bấm hạt mạng RJ45 (8P8C)**:
+    
+    - Cách rẻ và dễ nhất, chỉ cần kìm bấm, hạt mạng, chụp đầu và bộ test mạng.
+        
+    - Nên dùng hạt **xuyên thấu** để dễ canh chỉnh và tiết kiệm thời gian.
+        
+    - Chọn hạt theo cỡ dây: phổ biến là **24 AWG**, dây to hơn thì dùng hạt 23 AWG.
+        
+    - Tuy nhiên, RJ45 dễ bị bụi, oxi hóa, dẫn đến tiếp xúc kém – không lý tưởng về lâu dài.
+        
+2. **Sử dụng Keystone Jack hoặc Toolless RJ45 Connector**:
+    
+    - Chuyên nghiệp hơn. Có mạch PCB giúp giảm nhiễu (cross talk).
+        
+    - Dễ bảo trì, dễ thay thế.
+        
+    - Thi công phức tạp hơn một chút nhưng rất đáng đầu tư, đặc biệt nếu bạn đi dây âm tường.
+        
+3. **Sử dụng Patch Cable (dưới 5m)**:
+    
+    - Nếu bạn chỉ cần kết nối tạm thời hoặc ở khoảng cách ngắn, patch cable là giải pháp nhanh, ổn định, không cần bấm đầu.
+        
+
+> Ngoài ra, việc **tự bấm dây RJ45** không đảm bảo độ ổn định nếu không có thiết bị test chuyên dụng. Với hệ thống mạng dưới 10G thì vấn đề nhiễu có thể không nghiêm trọng, nhưng nếu bạn hướng tới mạng 10G thì nên ưu tiên kết nối chắc chắn như Keystone.
+
+### Sơ đồ đi dây mạng chuẩn
+
+Đây là cấu trúc đi dây mạng lý tưởng từ thiết bị đầu cuối (máy tính) đến switch:
+
+java
+
+CopyEdit
+
+`Máy tính → Patch cable (x) → Keystone Jack (âm tường) → Dây mạng âm tường Cat6A (y) → Patch Panel (Keystone) → Patch cable (z) → Switch`
+
+Trong đó, tổng chiều dài của **x + y + z ≤ 100m**.
+
+---
+
+Nếu bạn cần thêm hình minh họa hoặc tư vấn chi tiết cho từng trường hợp cụ thể (nhà mới xây, cải tạo, đi dây trần, v.v...), cứ hỏi mình nhé.

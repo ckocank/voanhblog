@@ -7,52 +7,142 @@ tags:
   - IoT
 categories: HomeLabJourney
 ---
-Modem là thiết bị giúp chúng ta giao tiếp ra thế giới bên ngoài. Router giúp chúng ta giao tiếp trong nhà. Thông thường các nhà mạng sẽ cấp cho chúng ta 1 cục Modem, cục này thường đảm nhiệm luôn vai trò làm Router. Thế nhưng chúng ta không nên kiêm nhiệm như thế do một số vấn đề sau:
-- **Độ tùy biến thấp**. Các cục modem này chỉ có các chức năng cơ bản nhất do phần lớn người dùng không cần quá nhiều chức năng, thậm chí ngay cả các chức năng có sẵn nhiều người còn không dùng đến.
-- **Vấn đề bảo mật**. Các cục modem tặng kèm thông thường sẽ không được update phần cứng thường xuyên dẫn tới việc dễ bị hacker tấn công nếu như có những lỗ hổng bảo mật chưa được vá (thậm chí nhà mạng còn không thèm update firmware luôn ý chứ).
-- **Cấu hình thấp**. Các cục modem tặng kèm thường có cấu hình thấp nhằm tiết kiệm chi phí vì đây là thiết bị đi kèm gói cước, chúng ta đang "mượn" thiết bị theo hợp đồng, nếu chúng ta có làm mất hoặc hỏng thì nhà mạng người ta cũng chả quan tâm, thường là thế chứ theo hợp đồng thì phải đền đấy.
+## Modem và Router: Đừng Để "2 Trong 1" Làm Khó Bạn
 
-Theo ý kiến cá nhân mình thì các bạn không nên sử dụng cục Modem nhà mạng làm Router mà hãy sử dụng chúng như một chiếc Converter (chuyển đổi tín hiệu quang điện), thậm chí nếu có module GPON SFP thì ta bỏ luôn cục Modem đấy đi cũng được. 
+Modem là thiết bị giúp chúng ta **kết nối ra thế giới bên ngoài**, còn router giúp các thiết bị **giao tiếp với nhau trong mạng nội bộ**. Thông thường, nhà mạng sẽ cung cấp cho bạn một thiết bị “2 trong 1” – tức là **modem tích hợp luôn router**. Tuy nhiên, theo kinh nghiệm cá nhân, bạn **không nên dùng combo này chính**, vì một vài lý do sau:
 
-Trên thị trường hiện nay có rất nhiều loại router khác nhau thì chúng ta sẽ chọn router như nào? Theo cấu hình và tính năng. Về cấu hình phần cứng, các yếu tố sau sẽ được cân nhắc:
-- **Số cổng của router**. Về cơ bản thì chỉ cần 2 cổng là đủ, thế nhưng việc có nhiều cổng sẽ giúp ta có nhiều lựa chọn hơn. Ví dụ như thêm nhiều subnet khác nhau hoặc 
-- **Tốc độ các cổng** 10/100/1000 hoặc cổng 2.5G/5G/10G.
-- **Số cổng quang**, SFP/SFP+ port.
-- **Số cổng PoE**.
-- **Cấu hình CPU, RAM** (ảnh hưởng trực tiếp tới tốc độ mạng).
-- Switch chip, cái này cho mấy tính năng nâng cao như L3 Hardware Offloading hoặc switch hết cổng thì cắm luôn vào router.
+### Tại sao không nên dùng modem của nhà mạng làm router chính?
 
-Về phần mềm, các chức năng cơ bản của router đều như nhau (DHCP, TCP/IP, DNS, etc). Do mình chỉ có kinh nghiệm sử dụng Mikrotik và pfSense/OPNsense nên mình sẽ nói về 2 loại này thôi.
+- **Độ tùy biến thấp**: Các modem do nhà mạng cấp chỉ có những tính năng cơ bản nhất, vì đa số người dùng phổ thông chẳng cần nhiều. Ngay cả các tính năng có sẵn, nhiều người còn không đụng tới bao giờ.
+    
+- **Vấn đề bảo mật**: Những thiết bị này thường không được cập nhật firmware định kỳ. Có lỗ hổng bảo mật cũng không ai vá. Một số nhà mạng thậm chí còn... không thèm update luôn!
+    
+- **Cấu hình yếu**: Vì là thiết bị “cho mượn” đi kèm gói cước nên cấu hình thường rất thấp để tiết kiệm chi phí. Mất hay hỏng thì cũng chẳng sao – trừ khi bạn làm mất thật, lúc đó phải đền theo hợp đồng đấy nhé.
+    
 
-Với những người không có kiến thức cơ bản về mạng máy tính hay kể cả có nhưng lần đầu làm quen thì chắc chắn các bạn nên lên YouTube xem cách config thiết bị của mình rồi. Hãy nhớ tìm đúng phiên bản nhé, đặc biệt là phải làm theo đúng các bước nếu nhỡ bỏ 1 bước nào đó quan trọng là thôi khỏi vào mạng luôn đó, tệ nhất và vừa không vào được mạng lại còn không vào được router (do set up firewall rules sai hoặc đổi mật khẩu xong quên) thì mất công reset lại lắm.
+### Giải pháp?
 
-Tóm lại có mấy bước cơ bản sau mà router nào cũng giống nhau chỉ khác cái giao diện nè:
-- Đổi tên đăng nhập và mật khẩu. Không bao giờ được đặt là admin admin nhé.
-- Cài đặt WAN. Có 2 lựa chọn là quay PPPoE nếu dùng modem với chức năng bridge. Hoặc set up static IP/ DHCP nếu cắm trực tiếp vào modem nhà mạng mà không config lại. 
-- Cài đặt LAN. Cài IP cho mạng LAN sau đó cài đặt DHCP server.
-- Cài đặt Firewall rules. Cái này thì tuỳ OS nhé, pfSense mặc định là block all, có cái mặc định allow all nên phải xem tài liệu mới biết được.
-- Cài VLAN. Cái này nâng cao hơn 1 tí, đại loại là mình tạo nhiều mạng LAN ảo khác nhau để quản lý traffic cho dễ. Kiểu như muốn chặn thiết bị camera, IoT kết nối internet. Thêm mạng cho khách để họ không truy cập được mạng nội bộ.
-- Cài Ads block, chặn quảng cáo. Cái này thì siêu tiện luôn nhé. Gần như là chặn hết các loại quảng cáo trên web, tất nhiên là trừ quảng cáo native hoặc YouTube. Chặn quảng cáo còn giúp trang web load nhanh hơn, xem các nội dung tập trung hơn đỡ bực mình. Đặc biệt là chặn các quảng cáo lừa đảo tránh việc trong nhà có người già trẻ em tò mò bấm vào. Nếu dùng DNS serv của quad9 còn an toàn nữa cơ. Mình sẽ có bài chia sẻ riêng về vấn đề này sau.
+Theo mình, bạn nên **chỉ dùng modem của nhà mạng như một bộ chuyển đổi tín hiệu (converter)** – hoặc nếu có module **GPON SFP** thì có thể **bỏ luôn modem**, cắm thẳng vào router riêng của bạn cũng được.
 
-Về lựa chọn mik (Mikrotik) hay sen (pfSense/opnSense) thì sau đây là trải nghiệm của mình. 
-- Điểm cộng của mik: 
-	- Cộng đồng người sử dụng ở Việt Nam khá nhiều, hơn sen là chắc chắn. 
-	- Thiết bị mua đi bán lại dễ.
-	- Khá rẻ so với các dòng thiết bị doanh nghiệp không đến từ Trung Quốc.
-	- Phần cứng tối ưu với phần mềm.
-- Điểm trừ của mik:
-	- Khá khó cho người không biết gì. Cần phải thực hành nhiều mới thạo được.
-	- Rẻ hơn một số thiết bị doanh nghiệp nhưng đắt hơn các thiết bị PC router tự build.
-	- Có thể chạy OS riêng trên PC router nhưng cần license. Cái này cũng là điểm cộng luôn.
-- Điểm cộng của sen:
-	- Dễ dùng hơn mik.
-	- Tận dụng tốt phần cứng máy tính cũ.
-	- Hệ điều hành mã nguồn mở.
-	- Cộng đồng tốt hơn (ý kiến cá nhân).
-- Điểm trừ của sen:
-	- Không chạy được arm cpu mà chỉ chạy được x86 thôi (bản community).
-	- Các phần cứng phổ thông đều có driver cho freebsd nhưng dùng phần cứng dị cần kiểm tra độ tương thích trước.
-	- Video hướng dẫn toàn tiếng Anh.
+---
 
-Sau khi đã dùng qua cả 2 thì hiện tại mình đang dùng 1 con mikrotik rb4011. Con này mình mua cũ nên giá cũng hợp lý. Cũng may mà con này có hỗ trợ container nên cài adguard được. 
+## Chọn Router Riêng: Phần Cứng Và Phần Mềm Cần Quan Tâm Gì?
 
+Trên thị trường hiện có rất nhiều loại router, từ giá rẻ cho đến thiết bị chuyên nghiệp. Khi chọn, bạn cần xem xét **cả cấu hình phần cứng lẫn phần mềm**.
+
+### Cấu hình phần cứng
+
+- **Số cổng mạng**: Thường chỉ cần 2 cổng là đủ, nhưng nếu muốn chia subnet, tách VLAN hoặc cắm nhiều thiết bị thì càng nhiều cổng càng tốt.
+    
+- **Tốc độ các cổng**: 10/100/1000 Mbps, hoặc cao hơn như 2.5G/5G/10G.
+    
+- **Cổng quang (SFP/SFP+)**: Quan trọng nếu bạn dùng kết nối tốc độ cao hoặc mạng doanh nghiệp nhỏ.
+    
+- **Cổng PoE**: Hữu ích nếu bạn dùng thiết bị như camera IP, access point…
+    
+- **CPU, RAM**: Ảnh hưởng trực tiếp đến hiệu suất mạng.
+    
+- **Switch chip**: Hỗ trợ các tính năng nâng cao như L3 Hardware Offloading.
+    
+
+### Phần mềm & tính năng
+
+Hầu hết các router hiện nay đều hỗ trợ các tính năng cơ bản như **DHCP, TCP/IP, DNS**... Tuy nhiên, với người thích vọc và tối ưu mạng thì hai cái tên phổ biến là **Mikrotik** và **pfSense/OPNsense**.
+
+---
+
+## Dành Cho Người Mới: Đừng Cấu Hình “Chay”, Hãy Lên YouTube!
+
+Nếu bạn chưa có nhiều kinh nghiệm về mạng, hoặc lần đầu cấu hình router, **hãy tìm đúng video hướng dẫn trên YouTube** (nhớ đúng phiên bản firmware nhé!). Làm sai một bước nhỏ thôi là:
+
+- Không vào được internet
+    
+- Thậm chí không truy cập được vào router (do đặt sai firewall rule hoặc đổi mật khẩu rồi quên...)
+    
+
+### Các bước cấu hình cơ bản (giao diện có thể khác nhau, nhưng logic thì giống nhau hết):
+
+1. **Đổi tài khoản đăng nhập mặc định** – không bao giờ dùng `admin/admin`
+    
+2. **Thiết lập kết nối WAN**:
+    
+    - Dùng **PPPoE** nếu modem đã chuyển sang bridge mode
+        
+    - Hoặc **Static IP/DHCP** nếu dùng trực tiếp modem nhà mạng
+        
+3. **Thiết lập mạng LAN**: IP nội bộ, DHCP server, dải IP cấp phát...
+    
+4. **Firewall rules**:
+    
+    - Ví dụ: pfSense mặc định block all, còn Mikrotik thì allow all
+        
+    - Phải đọc tài liệu chính xác để tránh "chặn nhầm"
+        
+5. **VLAN**: Tạo các mạng LAN ảo để tách riêng thiết bị IoT, camera, hoặc mạng khách
+    
+6. **Chặn quảng cáo (Ads Block)**:
+    
+    - Dùng DNS filter như AdGuard Home giúp **lướt web sạch hơn, nhanh hơn, an toàn hơn**
+        
+    - Tránh được quảng cáo lừa đảo – đặc biệt hữu ích trong nhà có người già, trẻ nhỏ
+        
+
+---
+
+## Mikrotik vs pfSense/OPNsense – Mỗi Loại Có Gì Hay?
+
+Mình đã từng dùng cả hai và đây là đánh giá cá nhân:
+
+### Mikrotik
+
+**Ưu điểm:**
+
+- Cộng đồng người dùng tại Việt Nam đông đảo
+    
+- Thiết bị dễ mua bán, thanh khoản tốt
+    
+- Giá hợp lý, phần cứng tối ưu cho phần mềm
+    
+- Có thể chạy OS riêng (RouterOS) trên PC, cần license
+    
+
+**Nhược điểm:**
+
+- Khó tiếp cận cho người mới, cần thực hành nhiều
+    
+- Dù rẻ hơn thiết bị doanh nghiệp nhưng vẫn đắt hơn PC router tự build
+    
+- Một số tính năng nâng cao cần mua thêm license
+    
+
+### pfSense / OPNsense
+
+**Ưu điểm:**
+
+- Giao diện dễ dùng, logic rõ ràng
+    
+- Tận dụng tốt phần cứng máy tính cũ
+    
+- Là hệ điều hành mã nguồn mở, cập nhật thường xuyên
+    
+- Cộng đồng quốc tế lớn, nhiều plugin hỗ trợ
+    
+
+**Nhược điểm:**
+
+- Không chạy được trên ARM (chỉ hỗ trợ x86, bản community)
+    
+- Nếu phần cứng "dị" thì phải kiểm tra driver trước (do dựa trên FreeBSD)
+    
+- Tài liệu, video hướng dẫn đa phần là tiếng Anh
+    
+
+---
+
+## Thiết Bị Mình Đang Dùng
+
+Hiện tại mình đang dùng một con **Mikrotik RB4011**, mua cũ nên giá rất ổn. Con này có hỗ trợ **container**, nên mình cài luôn **AdGuard Home** để chặn quảng cáo – cực kỳ tiện lợi, hiệu quả cao.
+
+---
+
+Nếu bạn có đam mê mày mò về mạng gia đình, tối ưu hiệu năng và bảo mật, thì việc tách biệt modem và router, cũng như tự cấu hình một router chuyên nghiệp là một bước tiến rất đáng thử. Mình sẽ có thêm các bài chi tiết về DNS filter, AdGuard, hoặc hướng dẫn cài pfSense/Mikrotik từ A-Z trong tương lai.
